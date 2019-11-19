@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+- node
+
+dist: bionic
+sudo: required # sudo is only required if you have an installation to global
+
+branches:
+    only:
+    - release
+
+before_script:
+- npm install 
+
+deploy:
+    provider: heroku
+    api_key: $HEROKU_KEY
+    app: radiant-depths-76609
+    on: release
+
+
+# store you environment vars into the heroku app config vars
