@@ -17,7 +17,8 @@ deploy:
     provider: heroku
     api_key: $HEROKU_KEY
     app: radiant-depths-76609
-    on: release
+    on: 
+        branch: release
 
 
 # store you environment vars into the heroku app config vars
